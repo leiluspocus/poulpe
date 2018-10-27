@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+
+  <body>
+	
+    <div id="hello-world-app">
+      <h1 v-cloak v-if="seen">{{ msg }}</h1>
+      <todo-item></todo-item>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        // Définit un nouveau composant appelé todo-item
+        Vue.component('todo-item', {
+        template: '<li>Ceci est une liste</li>'
+        });
+
+      var myApp = new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!",
+            seen: true
+          }
+        }
+      });
+    </script>
+  <script src="bundle.js"></script>
+  </body>
+</html>
