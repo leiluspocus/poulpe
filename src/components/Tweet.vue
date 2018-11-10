@@ -1,9 +1,11 @@
 <template> 
-    <p class="tweet">
+    <div class="tweet">
         <input type="text" class="tweet__content" placeholder="Contenu du tweet" v-model="content" v-on:change="notifyParent()"/>
-        <input type="text" class="tweet__publishDay" placeholder="15/11/2018" v-model="publishDate" v-on:change="notifyParent()"/>
-        <input type="text" class="tweet__publishHour" placeholder="12:30" v-model="publishHour" v-on:change="notifyParent()"/>
-    </p> 
+        <p class="tweet__time">
+            <span class="ec ec-date"></span> <input type="text" class="tweet__time-publishDay" placeholder="15/11/2018" v-model="publishDate" v-on:change="notifyParent()"/>
+            <span class="ec ec-alarm-clock"></span> <input type="text" class="tweet__time-publishHour" placeholder="12:30" v-model="publishHour" v-on:change="notifyParent()"/>
+        </p>
+    </div> 
 </template>
 
 <script>
@@ -39,10 +41,36 @@ input {
   margin-right:10px;
 }
 
+.ec {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.tweet__content {
+    width: 100%;
+    padding-left: 10px;
+}
+
 .tweet {
+    width: 50%;
+    margin: 0 auto; 
+    border-bottom: 1px solid pink;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 25px 50px;
+}
+
+.tweet__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tweet__time input {
+    height: 30px;
 }
 
 </style>

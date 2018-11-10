@@ -1,9 +1,10 @@
 <template>
   <div class="buffer">
     <h1>{{ msg }}</h1>
-    <h3>Tweets</h3>
+    <div class="tweets-container">
       <Tweet v-for="n in nbTweets" :index="n" v-on:tweetchanged="storeTweets" />
       <input class="buffer__submit" type="submit" value="Schedule" v-on:click="programTweets()" />
+    </div>
   </div>
 </template>
 
@@ -58,6 +59,7 @@ a {
 }
 
 .buffer__submit {
+  margin-top:20px;
   background-color: #45498F;
   width: 300px;
   height: 50px; 
