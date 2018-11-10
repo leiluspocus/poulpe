@@ -12,6 +12,10 @@
     static programTweets(tweets) {
       tweets.forEach((tweet) => {
         console.log(`Publier le tweet ${tweet.content} le ${tweet.publishDate} à ${tweet.publishHour}`);
+        const text = tweet.content;
+        const scheduled_at = `${tweet.publishDate}T${tweet.publishHour}Z`;
+        console.log(text);
+        console.log(scheduled_at);
       });
     }
  }

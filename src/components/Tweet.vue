@@ -2,8 +2,8 @@
     <div class="tweet">
         <input type="text" class="tweet__content" placeholder="Contenu du tweet" v-model="content" v-on:change="notifyParent()"/>
         <p class="tweet__time">
-            <span class="ec ec-date"></span> <input type="text" class="tweet__time-publishDay" placeholder="15/11/2018" v-model="publishDate" v-on:change="notifyParent()"/>
-            <span class="ec ec-alarm-clock"></span> <input type="text" class="tweet__time-publishHour" placeholder="12:30" v-model="publishHour" v-on:change="notifyParent()"/>
+            <span class="ec ec-date"></span> <input type="date" class="tweet__time-publishDay" placeholder="15/11/2018" v-model="publishDate" v-on:change="notifyParent()"/>
+            <span class="ec ec-alarm-clock"></span> <input type="time" class="tweet__time-publishHour" placeholder="12:30" v-model="publishHour" v-on:change="notifyParent()"/>
         </p>
     </div> 
 </template>
