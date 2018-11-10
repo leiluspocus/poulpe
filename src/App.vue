@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.gif">
+    <TwitterBuffer msg="Simple Tweets Scheduler" :nbTweets=10 />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TwitterBuffer from './components/TwitterBuffer.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TwitterBuffer
   }
 }
 </script>
@@ -24,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img {
+  width: 20%;
 }
 </style>
